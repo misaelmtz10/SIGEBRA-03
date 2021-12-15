@@ -73,7 +73,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto my-2 my-lg-0">
             <li class="nav-item">
-              <a class="nav-link bg-gray" href="index.html">Home</a>
+              <a class="nav-link bg-gray" href="landing.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link bg-gray" href="#about">About</a>
@@ -186,15 +186,15 @@
                           </div>
                           <div class="row mt-3">
                             <div class="col-3">
-                              <label for="dato" class="h6 col-form-label"
-                                >Dato</label
+                              <label for="Correo" class="h6 col-form-label"
+                                >Correo</label
                               >
                             </div>
                             <div class="col-9">
                               <input
-                                type="text"
-                                id="dato"
-                                placeholder="dato"
+                                type="email"
+                                id="Correo"
+                                placeholder="Correo"
                                 class="form-control"
                                 aria-describedby="passwordHelpInline"
                               />
@@ -220,31 +220,31 @@
                           </div>
                           <div class="row mt-3">
                             <div class="col-3">
-                              <label for="pay" class="h6 col-form-label"
+                              <label for="tipoPago" class="h6 col-form-label"
                                 >Tipo de pago</label
                               >
                             </div>
                             <div class="col-9">
-                              <input
-                                type="text"
-                                id="pay"
-                                placeholder="Tipo de pago"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
+                              <select id="tipoPago" class="form-select">
+                                <option value="" selected>
+                                  Seleccionar...
+                                </option>
+                                <option value="1">Tarjeta</option>
+                                <option value="2">Paypal</option>
+                              </select>
                             </div>
                           </div>
                           <div class="row mt-3">
                             <div class="col-3">
                               <label for="dato2" class="h6 col-form-label"
-                                >Dato</label
+                                >Teléfono</label
                               >
                             </div>
                             <div class="col-9">
                               <input
                                 type="text"
                                 id="dato2"
-                                placeholder="dato"
+                                placeholder="Teléfono"
                                 class="form-control"
                                 aria-describedby="passwordHelpInline"
                               />
@@ -410,7 +410,7 @@
                                 <input
                                   type="number"
                                   id="cvv"
-                                  placeholder="Tipo de pago"
+                                  placeholder="cvv"
                                   class="form-control"
                                   aria-describedby="passwordHelpInline"
                                 />
