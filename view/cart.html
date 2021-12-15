@@ -8,7 +8,7 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Checkout | SIGEBRA</title>
+    <title>Carrito | SIGEBRA</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../assets/img/logo/logo.png" />
     <!-- Bootstrap Icons-->
@@ -90,27 +90,10 @@
         <div class="row">
           <div class="col-12">
             <h4 class="font-weight-bold mt-3">
-              <i class="bi bi-cart-fill"></i> &nbsp;Este es tu pedido
+              <i class="bi bi-cart-fill"></i> &nbsp;Prospectos de compra 
             </h4>
           </div>
-          <hr />
-          <div class="col-12 align-items-center text-center">
-            <a
-              class="btn btn-primary {{(vistas !=='view1')&&'disabled text-black'}}"
-              href="#about"
-              >1. Completa el pedido</a
-            >
-            <a
-              class="btn btn-primary {{(vistas !=='view2')&&'disabled text-black'}}"
-              href="#about"
-              >2. Realiza el pago</a
-            >
-            <a
-              class="btn btn-primary {{(vistas !=='view3')&&'disabled text-black'}}"
-              href="#about"
-              >3. Comprobante de pago</a
-            >
-          </div>
+          <hr/>
         </div>
         <div class="row mt-5">
           <div class="col-12">
@@ -125,7 +108,6 @@
                       style="height: 300px; width: auto"
                       alt="Casa"
                     />
-                    <p class="mt-1">Casa compacta en el bosque</p>
                     <p class="text-muted h6 lead">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Ut assumenda placeat cupiditate vero a! Voluptas
@@ -133,8 +115,7 @@
                   </div>
                   <div class="col-8">
                     <h5 class="card-title">
-                      Datos del comprador/rentador para el contrato de
-                      compra/venta o renta
+                        Casa compacta en el bosque
                     </h5>
                     <p></p>
                     <form>
@@ -143,131 +124,100 @@
                           <div class="row">
                             <div class="col-3">
                               <label for="Nombre" class="h6 col-form-label"
-                                >Nombre</label
+                                >Costo</label
                               >
                             </div>
                             <div class="col-9">
-                              <input
-                                type="text"
-                                id="nombre"
-                                placeholder="nombre"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
+                                <label for="Nombre" class="h6 col-form-label"
+                                >$1,000,000</label
+                              >
                             </div>
                           </div>
                           <div class="row mt-3">
                             <div class="col-3">
                               <label for="frc" class="h6 col-form-label"
-                                >RFC</label
+                                >Ubicación</label
                               >
                             </div>
                             <div class="col-9">
-                              <input
-                                type="text"
-                                id="rfc"
-                                placeholder="rfc"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
+                                <label for="frc" class="h6 col-form-label"
+                                >Av. Paseo Tollocan, Toluca, Edo.Méx.</label
+                              >
                             </div>
                           </div>
                           <div class="row mt-3">
                             <div class="col-3">
                               <label for="Correo" class="h6 col-form-label"
-                                >Correo</label
+                                >Áreas</label
                               >
                             </div>
                             <div class="col-9">
-                              <input
-                                type="email"
-                                id="Correo"
-                                placeholder="Correo"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="row">
-                            <div class="col-3">
-                              <label for="apellidos" class="h6 col-form-label"
-                                >Apellidos</label
+                                <label for="Correo" class="h6 col-form-label"
+                                >Cocina integral, desayunador...</label
                               >
                             </div>
-                            <div class="col-9">
-                              <input
-                                type="text"
-                                id="apellidos"
-                                placeholder="apellidos"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
-                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                  <label for="Correo" class="h6 col-form-label"
+                                    >Servicios</label
+                                  >
+                                </div>
+                                <div class="col-9">
+                                    <label for="Correo" class="h6 col-form-label"
+                                    >Internet, TV De Paga</label
+                                  >
+                                </div>
                           </div>
                           <div class="row mt-3">
-                            <div class="col-3">
-                              <label for="tipoPago" class="h6 col-form-label"
-                                >Tipo de pago</label
-                              >
-                            </div>
                             <div class="col-9">
-                              <select id="tipoPago" class="form-select">
-                                <option value="" selected>
-                                  Seleccionar...
-                                </option>
-                                <option value="1">Tarjeta</option>
-                                <option value="2">Paypal</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="row mt-3">
-                            <div class="col-3">
-                              <label for="dato2" class="h6 col-form-label"
-                                >Teléfono</label
+                                <button
+                                class="btn btn-primary"
+                                style="margin-right: 30px"
+                                type="button"
+                                
                               >
+                                <i class="bi bi-arrow-right-short"></i>&nbsp;
+                                Contactar Vendedor
+                              </button>
                             </div>
-                            <div class="col-9">
-                              <input
-                                type="text"
-                                id="dato2"
-                                placeholder="Teléfono"
-                                class="form-control"
-                                aria-describedby="passwordHelpInline"
-                              />
+                            <div class="col-3">
+                                <a
+                                    class="btn btn-primary"
+                                    style="margin-right: 30px"
+                                    type="button"
+                                    href=""
+                                >
+                                <i class="bi bi-arrow-right-short"></i>&nbsp;
+                                Ver Detalle
+                            </a>
                             </div>
-                          </div>
+                      </div>
                         </div>
                       </div>
                       <div class="row mt-5">
                         <div class="col-4"></div>
                         <div class="col-4"></div>
-                        <div class="col-4">
-                          <div class="form-check text-center">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="acept"
-                            />
-                            <label class="form-check-label h6" for="acept">
-                              Acepto términos y condiciones
-                            </label>
-                          </div>
-                        </div>
                       </div>
                       <div class="row">
                         <div class="col-12 mt-2 text-end">
-                          <button
+                          <a
                             class="btn btn-primary"
                             style="margin-right: 30px"
                             type="button"
-                            ng-click="secondStep()"
+                            href="/landing.html"
                           >
                             <i class="bi bi-arrow-right-short"></i>&nbsp;
-                            Continuar
-                          </button>
+                            Cancelar
+                        </a>
+                          <a
+                            class="btn btn-primary"
+                            style="margin-right: 30px"
+                            type="button"
+                            href="wizard.html"
+                          >
+                            <i class="bi bi-arrow-right-short"></i>&nbsp;
+                            Checkout
+                        </a>
                         </div>
                       </div>
                     </form>
