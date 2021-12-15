@@ -1,77 +1,585 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Home | SIGEBRA</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../dist/css/styles.css" rel="stylesheet" />
-        <style>
-            .bg-gray{
-                color: #6c757d !important;
-            }
-        </style>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand  bg-gray" href="#page-top">Sweet Home</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link bg-gray" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link bg-gray" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link bg-gray" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link bg-gray" href="#pricing">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link bg-gray" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link bg-gray" href="/views/Administrador/login.html">Iniciar</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead2">
-            <div class="container">
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Checkout | SIGEBRA</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/logo.png" />
+    <!-- Bootstrap Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- SimpleLightbox plugin CSS-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../dist/css/styles.css" rel="stylesheet" />
+    <style>
+      .bg-gray {
+        color: #6c757d !important;
+      }
+      .bg-gray:hover{
+        color: #59580C !important;
+      }
+      .text.black {
+        color: black;
+      }
+    </style>
+  </head>
+  <body id="page-top" ng-controller="WizardController">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand bg-gray" href="#page-top"
+          ><img
+            src="../assets/img/logo/logo.png"
+            style="height: 40px; width: auto"
+          />
+          Sweet Home</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-gray" href="/views/Administrador/login.html"
+                >Iniciar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-weight-bold mt-3">
+              <i class="bi bi-cart-fill"></i> &nbsp;Este es tu pedido
+            </h4>
+          </div>
+          <hr />
+          <div class="col-12 align-items-center text-center">
+            <a
+              class="btn btn-primary {{(vistas !=='view1')&&'disabled text-black'}}"
+              href="#about"
+              >1. Completa el pedido</a
+            >
+            <a
+              class="btn btn-primary {{(vistas !=='view2')&&'disabled text-black'}}"
+              href="#about"
+              >2. Realiza el pago</a
+            >
+            <a
+              class="btn btn-primary {{(vistas !=='view3')&&'disabled text-black'}}"
+              href="#about"
+              >3. Comprobante de pago</a
+            >
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body" ng-show="vistas==='view1'">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 class=" font-weight-bold">Bienvenido a Sweet Home; ¿estás listo?</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="-75 mb-5">Tenemos propuestas atractivas para tu familia y para ti.</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                    </div>
+                  <div class="col-4 text-center">
+                    <h5 class="card-title text-center"></h5>
+                    <img
+                      src="../assets/img/boxhouse.jpeg"
+                      class="card-img-top"
+                      style="height: 300px; width: auto"
+                      alt="Casa"
+                    />
+                    <p class="mt-1">Casa compacta en el bosque</p>
+                    <p class="text-muted h6 lead">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ut assumenda placeat cupiditate vero a! Voluptas
+                    </p>
+                  </div>
+                  <div class="col-8">
+                    <h5 class="card-title">
+                      Datos del comprador/rentador para el contrato de
+                      compra/venta o renta
+                    </h5>
+                    <p></p>
+                    <form>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">
+                              <label for="Nombre" class="h6 col-form-label"
+                                >Nombre</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="nombre"
+                                placeholder="nombre"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                          <div class="row mt-3">
+                            <div class="col-3">
+                              <label for="frc" class="h6 col-form-label"
+                                >RFC</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="rfc"
+                                placeholder="rfc"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                          <div class="row mt-3">
+                            <div class="col-3">
+                              <label for="dato" class="h6 col-form-label"
+                                >Dato</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="dato"
+                                placeholder="dato"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-3">
+                              <label for="apellidos" class="h6 col-form-label"
+                                >Apellidos</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="apellidos"
+                                placeholder="apellidos"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                          <div class="row mt-3">
+                            <div class="col-3">
+                              <label for="pay" class="h6 col-form-label"
+                                >Tipo de pago</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="pay"
+                                placeholder="Tipo de pago"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                          <div class="row mt-3">
+                            <div class="col-3">
+                              <label for="dato2" class="h6 col-form-label"
+                                >Dato</label
+                              >
+                            </div>
+                            <div class="col-9">
+                              <input
+                                type="text"
+                                id="dato2"
+                                placeholder="dato"
+                                class="form-control"
+                                aria-describedby="passwordHelpInline"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-5">
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                          <div class="form-check text-center">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="acept"
+                            />
+                            <label class="form-check-label h6" for="acept">
+                              Acepto términos y condiciones
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 mt-2 text-end">
+                          <button
+                            class="btn btn-primary"
+                            style="margin-right: 30px"
+                            type="button"
+                            ng-click="secondStep()"
+                          >
+                            <i class="bi bi-arrow-right-short"></i>&nbsp;
+                            Continuar
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
+              </div>
+              <div class="card-body" ng-show="vistas==='view2'">
+                <div class="row">
+                  <div class="col-12">
+                    <ul
+                      class="nav nav-tabs justify-content-center"
+                      id="myTab"
+                      role="tablist"
+                    >
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="home-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#home"
+                          type="button"
+                          role="tab"
+                          aria-controls="home"
+                          aria-selected="true"
+                        >
+                          Tarjeta de crédito/débito
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="profile-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#profile"
+                          type="button"
+                          role="tab"
+                          aria-controls="profile"
+                          aria-selected="false"
+                        >
+                          Paypal
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="home"
+                        role="tabpanel"
+                        aria-labelledby="home-tab"
+                      >
+                        <br />
+                        <div class="row">
+                          <div class="col-5 offset-1">
+                            <div class="row">
+                              <div class="col-4">
+                                <label for="titular" class="h6 col-form-label"
+                                  >Nombre del titular</label
+                                >
+                              </div>
+                              <div class="col-8">
+                                <input
+                                  type="text"
+                                  id="titular"
+                                  placeholder="nombre"
+                                  class="form-control"
+                                  aria-describedby="passwordHelpInline"
+                                />
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="col-4">
+                                <label for="fecha" class="h6 col-form-label"
+                                  >Fecha expiración</label
+                                >
+                              </div>
+                              <div class="col-8">
+                                <input
+                                  type="date"
+                                  id="fecha"
+                                  placeholder=""
+                                  class="form-control"
+                                  aria-describedby="passwordHelpInline"
+                                />
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="col-4">
+                                <label for="importe" class="h6 col-form-label"
+                                  >Importe</label
+                                >
+                              </div>
+                              <div class="col-8">
+                                <input
+                                  type="number"
+                                  min="1"
+                                  id="importe"
+                                  placeholder="$0.00MXN"
+                                  class="form-control"
+                                  aria-describedby="passwordHelpInline"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="row">
+                              <div class="col-3">
+                                <label for="tipoCard" class="h6 col-form-label"
+                                  >Tipo de tarjeta</label
+                                >
+                              </div>
+                              <div class="col-9">
+                                <select id="tipoCard" class="form-select">
+                                  <option value="" selected>
+                                    Seleccionar...
+                                  </option>
+                                  <option value="1">Crédito</option>
+                                  <option value="2">Débito</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="col-3">
+                                <label for="cvv" class="h6 col-form-label"
+                                  >CVV</label
+                                >
+                              </div>
+                              <div class="col-9">
+                                <input
+                                  type="number"
+                                  id="cvv"
+                                  placeholder="Tipo de pago"
+                                  class="form-control"
+                                  aria-describedby="passwordHelpInline"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="profile"
+                        role="tabpanel"
+                        aria-labelledby="profile-tab"
+                      >
+                        <div class="row">
+                          <div class="col-12 mt-3 text-center">
+                            <div id="paypal-button-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-5 offset-1">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="acept2"
+                      />
+                      <label class="form-check-label h6" for="acept2">
+                        Acepto términos y condiciones
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-6 text-end">
+                    <button
+                      class="btn btn-primary"
+                      style="margin-right: 30px"
+                      type="button"
+                      ng-click="firstStep()"
+                    >
+                      <i class="bi bi-arrow-left-short"></i>&nbsp; Atras
+                    </button>
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                      ng-click="thirdStep()"
+                    >
+                      <i class="bi bi-arrow-right-short"></i>&nbsp; Continuar
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body" ng-show="vistas==='view3'">
+                <div class="row">
+                  <div class="col-12">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <p><b>De: </b> Juan Pérez</p>
+                      </li>
+                      <li class="list-group-item">
+                        <p><b>Tarjeta: </b>**** **** **** 1234</p>
+                      </li>
+                      <li class="list-group-item">
+                        <p><b>Tipo de transacción: </b>Electrónica</p>
+                      </li>
+                      <li class="list-group-item">
+                        <p><b>Tipo de cambio: </b>$0.00MXN = $0.00MXN</p>
+                      </li>
+                      <li class="list-group-item">
+                        <p>
+                          <b>Enviar: </b>Juan Pérez, Calle Palma, Cuernavaca,
+                          Centro. <br />62000 Cuernavaca, Morelos <br />México
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-12 text-end">
+                    <p class="lead h6">
+                      <i
+                        style="color: #b7cd7f; font-size: 30px"
+                        class="bi bi-patch-check"
+                      ></i
+                      >&nbsp; Pago verificado a través de correo electrónico
+                    </p>
+                    <a class="btn btn-primary" href="../landing.html">
+                        <i class="bi bi-check2"></i>&nbsp; Finalizar
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
-        
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../dist/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        
-    </body>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">
+          Copyright &copy; 2021 - SIGEBRA
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../dist/js/scripts.js"></script>
+    <script src="../dist/js/angular.min.js"></script>
+    <script src="../dist/js/wizard.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    <script>
+      paypal
+        .Buttons({
+          // Sets up the transaction when a payment button is clicked
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: "77.44", // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                  },
+                },
+              ],
+            });
+          },
+
+          // Finalize the transaction after payer approval
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (orderData) {
+              // Successful capture! For dev/demo purposes:
+              console.log(
+                "Capture result",
+                orderData,
+                JSON.stringify(orderData, null, 2)
+              );
+              var transaction =
+                orderData.purchase_units[0].payments.captures[0];
+              alert(
+                "Transaction " +
+                  transaction.status +
+                  ": " +
+                  transaction.id +
+                  "\n\nSee console for all available details"
+              );
+
+              // When ready to go live, remove the alert and show a success message within this page. For example:
+              // var element = document.getElementById('paypal-button-container');
+              // element.innerHTML = '';
+              // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+              // Or go to another URL:  actions.redirect('thank_you.html');
+            });
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
+  </body>
 </html>
