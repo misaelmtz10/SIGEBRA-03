@@ -11493,9 +11493,9 @@ header.masthead2 h1, header.masthead2 .h1 {
 
 #carrusel {
   float:left;
-  width:600px;
+  width:859px;
   overflow:hidden;
-  height:203px;
+  height:300px;
   position:relative;
   margin-top:20px;
   margin-bottom:20px;
@@ -11526,14 +11526,14 @@ header.masthead2 h1, header.masthead2 .h1 {
 
 .carrusel>div {
   float: left;
-  height: 203px;
   margin-right: 5px;
-  width: 195px;
   text-align:center;
 }
 
 .carrusel img {
   cursor:pointer;
+  width: 200px;
+  height: 100px;
 }
 
 .product {
